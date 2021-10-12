@@ -79,6 +79,11 @@ const onSummarySubmit = async e => {
       'error',
       `Desole vos informations n'ont pas pu etre recu par notre serveur. veuillez ressayez ulterieurement`
     );
+  } finally {
+    alertUI(
+      'error',
+      `Desole vos informations n'ont pas pu etre recu par notre serveur. veuillez ressayez ulterieurement`
+    );
   }
 };
 
