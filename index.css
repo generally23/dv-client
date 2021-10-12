@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: Roboto, sans-serif;
+}
+
+h2,
+h1 {
+  font-weight: 400;
+}
+
+.alert {
+  position: fixed;
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 2rem;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+  text-align: center;
+}
+
+.alert--success {
+  width: 100%;
+  height: initial;
+  background: #007c5d;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.alert--error {
+  width: 100%;
+  height: initial;
+  background: rgba(129, 12, 22, 0.836);
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.form,
+.summary {
+  width: 95%;
+  margin: auto;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+}
+
+.form--unactive {
+  display: none;
+}
+
+@-webkit-keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.block {
+  margin-bottom: 2rem;
+  display: none;
+  -webkit-animation: pop 1s ease;
+          animation: pop 1s ease;
+}
+
+.block--active {
+  opacity: 1;
+  display: block;
+}
+
+.block__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.block__content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.block__content label.photo-frame {
+  height: 300px;
+  width: 100%;
+  border: 1px dashed;
+  margin: auto;
+  overflow: hidden;
+}
+
+.block__content label.photo-frame img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.block__content label input:not([type='radio']) {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.block__content label input:focus {
+  background: #eee;
+  outline: none;
+}
+
+.block__content label select {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+}
+
+.block__content label select:focus {
+  outline: none;
+}
+
+.block__content #photo {
+  display: none;
+}
+
+.buttons-container {
+  margin-bottom: 0.5rem;
+}
+
+.buttons-container .btn {
+  border: none;
+  background: #007c5d;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  width: calc((100% - 1rem) / 2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.buttons-container .btn:hover {
+  background: #015540;
+}
+
+.buttons-container .btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.summary {
+  display: none;
+}
+
+.summary--active {
+  display: block;
+}
+
+.summary .summary__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.summary .summary__content {
+  margin-bottom: 1rem;
+}
+
+.summary .summary__content .summary__element {
+  background: #bbb;
+  padding: 1.5rem 2rem;
+}
+
+.summary .summary__content .summary__element:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.summary .summary__content .summary__element span {
+  display: inline-block;
+}
+
+.summary .summary__content .summary__property {
+  margin-right: 1rem;
+  color: rgba(129, 12, 22, 0.836);
+}
+
+.summary .summary__content .summary__property--photo {
+  display: block !important;
+  margin-bottom: 1rem;
+}
+
+.summary .summary__content .summary__value {
+  color: #007c5d;
+}
+
+.summary .summary__content .summary__value--photo {
+  display: block !important;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.summary .summary__content .summary__value--photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.summary .summary__btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #007c5d;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  width: calc((100% - 1.8rem) / 2);
+  background: transparent;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+  cursor: pointer;
+}
+
+.summary .summary__btn:not(:last-child) {
+  margin-right: 1rem !important;
+}
+
+.summary .summary__btn:hover {
+  background: #007c5d;
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>International DV Lottery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="alert"></div>
+
+    <form class="form">
+      <div class="block block-personal">
+        <h2 class="block__header">Information Personel</h2>
+        <div class="block__content">
+          <label for="firstname">
+            Prenom: *
+            <input type="text" id="firstname" name="firstname" required />
+          </label>
+
+          <label for="midname">
+            Second Prenom:
+            <input type="text" id="midname" name="midname" />
+          </label>
+
+          <label for="lastname">
+            Nom: *
+            <input type="text" id="lastname" name="lastname" required />
+          </label>
+
+          <label for="email">
+            Email:
+            <input type="email" name="email" id="email" />
+          </label>
+
+          <label for="phonenum">
+            Telephone:
+            <input type="tel" name="phonenum" id="phonenum" />
+          </label>
+
+          <label for="gender">
+            Sex:
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              value="Masculin"
+              checked
+            />
+            Masculin
+            <input type="radio" name="gender" id="female" value="Feminin" />
+            Feminin
+          </label>
+        </div>
+      </div>
+
+      <div class="block block-born">
+        <h2 class="block__header">Naissance</h2>
+
+        <div class="block__content">
+          <label for="cob">
+            Pays de Naissance: *
+            <input type="text" name="cob" id="cob" required />
+          </label>
+
+          <label for="pob">
+            Lieu de Naissance: *
+            <input type="text" name="pob" id="pob" required />
+          </label>
+
+          <label for="dob">
+            Date de Naissance: *
+            <input type="date" name="dob" id="dob" required />
+          </label>
+        </div>
+      </div>
+
+      <div class="block block-passport">
+        <h2 class="block__header">Passport</h2>
+
+        <div class="block__content">
+          <label for="fnonpass">
+            Prenom sur le Passport:
+            <input type="text" id="fnonpass" name="fnonpassp" />
+          </label>
+
+          <label for="midname">
+            Second Prenom sur le Passport:
+            <input type="text" id="mnonpass" name="mnonpass" />
+          </label>
+
+          <label for="lnonpass">
+            Nom sur le Passport:
+            <input type="text" id="lnonpass" name="lnonpass" />
+          </label>
+
+          <label for="passnum">
+            Numero de Passport: *
+            <input type="text" name="passnum" id="passnum" required />
+          </label>
+
+          <label for="passissuer">
+            Pays Emetteur: *
+            <input type="text" name="passissuer" id="passissuer" required />
+          </label>
+
+          <label for="passexpdate">
+            Date d'Expiration: *
+            <input type="date" name="passexpdate" id="passexpdate" required />
+          </label>
+        </div>
+      </div>
+
+      <div class="block block-education">
+        <h2 class="block__header">Education</h2>
+
+        <div class="block__content">
+          <label for="grade">
+            Niveau d'Education:
+            <select name="grade" id="grade">
+              <option value="College">College</option>
+              <option value="Lycee: (Obtenue le BAC)"
+                >Lycee: (Obtenue le BAC)</option
+              >
+              <option value="Lycee: (Pas eu le BAC)"
+                >Lycee: (Pas eu le BAC)</option
+              >
+              <option value="Universite: (Diplome)"
+                >Universite: (Diplome)</option
+              >
+              <option value="Universite (Non Diplome)"
+                >Universite (Non Diplome)</option
+              >
+              <option value="Ecole Technique">Ecole Technique</option>
+              <option value="Non Etudiant">Non Etudiant</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="block block-picture">
+        <h2 class="block__header">Photo</h2>
+
+        <div class="block__content">
+          <label for="photo" class="photo-frame"></label>
+          <input
+            type="file"
+            name="photo"
+            id="photo"
+            required
+            accept="image/*"
+          />
+        </div>
+      </div>
+
+      <div class="buttons-container"></div>
+    </form>
+
+    <div class="summary">
+      <h2 class="summary__header">Revoir vos informations</h2>
+      <div class="summary__content"></div>
+      <div class="summary__btns">
+        <button class="summary__btn" id="summary__update-btn">Modifiez</button>
+        <button class="summary__btn" id="summary__submit-btn">Soumettre</button>
+      </div>
+    </div>
+
+    <script src="elements.js"></script>
+    <script src="data.js"></script>
+    <script src="functions.js"></script>
+    <script src="listeners.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
