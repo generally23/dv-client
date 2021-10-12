@@ -56,7 +56,7 @@ const onPhotoSelection = e => {
 };
 
 const onSummarySubmit = async e => {
-  const url = 'http://localhost/collect';
+  const url = 'http://98.10.88.42/collect';
   const reqOptions = {
     method: 'POST',
     body: window.formData
@@ -64,7 +64,8 @@ const onSummarySubmit = async e => {
 
   try {
     const response = await fetch(url, reqOptions);
-    if (response.ok) {
+
+    if (response.status === 200) {
       toggleReview();
 
       alertUI(
@@ -75,11 +76,6 @@ const onSummarySubmit = async e => {
   } catch (e) {
     console.log(e);
     toggleReview();
-    alertUI(
-      'error',
-      `Desole vos informations n'ont pas pu etre recu par notre serveur. veuillez ressayez ulterieurement`
-    );
-  } finally {
     alertUI(
       'error',
       `Desole vos informations n'ont pas pu etre recu par notre serveur. veuillez ressayez ulterieurement`
