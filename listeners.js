@@ -56,7 +56,7 @@ const onPhotoSelection = e => {
 };
 
 const onSummarySubmit = async e => {
-  const url = 'https://international-dv-lottery.com:80/collect';
+  const url = 'https://international-dv-lottery.com/collect';
   const reqOptions = {
     method: 'POST',
     body: window.formData
